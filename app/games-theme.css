@@ -1,0 +1,36 @@
+/* English Club · игры (корзины и порядок слов): тот же язык, что в приложении — синее поле сайта и глубокий красный поста,
+   красная вертикальная полоса, герб водяным знаком, плитки с прямыми углами, Montserrat. */
+@font-face{font-family:'Montserrat';font-weight:100 900;font-display:swap;src:url('../assets/fonts/Montserrat-cyrillic-ext.woff2') format('woff2');
+  unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Montserrat';font-weight:100 900;font-display:swap;src:url('../assets/fonts/Montserrat-cyrillic.woff2') format('woff2');
+  unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Montserrat';font-weight:100 900;font-display:swap;src:url('../assets/fonts/Montserrat-latin-ext.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-weight:100 900;font-display:swap;src:url('../assets/fonts/Montserrat-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+body:has(.g){font-family:'Montserrat','Golos Text',sans-serif;background:linear-gradient(165deg,#262E7A 0%,#1E2564 50%,#151A4D 100%)}
+body:has(#line){background:linear-gradient(165deg,#B8101C 0%,#A9000A 55%,#7E000C 100%)}
+body .g{font-family:'Montserrat','Golos Text',sans-serif}
+body .word,body .kk,body .end .big{font-family:'Montserrat','Golos Text',sans-serif}
+body .word{font-weight:900;letter-spacing:-.02em;font-size:min(12.5vw,46px)}
+body .hud .pill{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.55);border-radius:3px;color:#fff;font-weight:800;font-size:13px}
+body .line{background:rgba(255,255,255,.1);border:2px dashed rgba(255,255,255,.55);border-radius:4px}
+body .line.ok{background:rgba(75,211,154,.2);border-color:#4BD39A;border-style:solid}
+body .line.no{background:rgba(0,0,0,.22);border-color:#fff;border-style:solid}
+body .t{background:#fff;color:#1E2564;border-radius:3px;font-weight:800;font-size:15.5px;box-shadow:0 3px 0 rgba(0,0,0,.28)}
+body .t.small{font-size:14px}
+body .btn2{background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.55);border-radius:4px;font-weight:800;letter-spacing:.01em}
+body .btn2.main{background:#fff;color:#A9000A;border-color:#fff;box-shadow:0 3px 0 rgba(0,0,0,.28)}
+body .b{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.55);border-radius:4px;font-weight:800;font-size:12.5px}
+body .b b{font-weight:900;font-size:22px}
+body .b.ok{background:#1E9E5A;border-color:#1E9E5A}
+body .b.no{background:#C2202D;border-color:#fff}
+body .combo{color:#fff;font-weight:900;letter-spacing:.06em}
+/* красная полоса сайта слева и герб водяным знаком внизу */
+body:has(.g)::before{content:'';position:fixed;left:0;top:0;bottom:0;width:6px;background:#C2202D;pointer-events:none;z-index:2}
+body:has(#line)::before{background:#1E2564}
+body:has(.g)::after{content:'';position:fixed;left:50%;bottom:6px;width:200px;height:140px;margin-left:-100px;pointer-events:none;opacity:.09;
+  background:url('../assets/brand-logo-white.png') center/contain no-repeat}
+/* тонкая линия под шапкой игры, как рамка на их постах */
+body:has(.g) .hud{padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.35)}

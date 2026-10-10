@@ -1,0 +1,15 @@
+{
+  "name": "English Club · платформа",
+  "short_name": "English Club",
+  "description": "Видеоуроки, задания и словарь между занятиями.",
+  "lang": "ru",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5F4F0",
+  "theme_color": "#C2202D",
+  "icons": [
+    { "src": "assets/brand-logo.png", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
